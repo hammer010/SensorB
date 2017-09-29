@@ -22,7 +22,7 @@ print("Start program")
 while True:
     result = instance.read()
     if result.is_valid():
-        print("Horodatage: " + str(datetime.datetime.now()))
+        print("Horodatage: " + str(datetime.datetime.now().isoformat(' ', 'seconds')))
         print("Temperature: %.2f C" % result.temperature)
         print("Humidity: %.2f %%" % result.humidity)
         
