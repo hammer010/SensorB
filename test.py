@@ -22,12 +22,12 @@ print("Start program")
 while True:
     result = instance.read()
     if result.is_valid():
-        print("Horodatage: " + str(datetime.datetime.now().isoformat(' ', 'seconds')))
+        print("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
         print("Temperature: %.2f C" % result.temperature)
         print("Humidity: %.2f %%" % result.humidity)
         
         fichier = open("data.txt", "w")
-        fichier.write("Horodatage: " + str(datetime.datetime.now()))
+        fichier.write("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
         fichier.write("\nTemperature: %.2f C" % result.temperature)
         fichier.write("\nHumidite: %.2f %%" % result.humidity)
         fichier.close()
