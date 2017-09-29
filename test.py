@@ -16,11 +16,8 @@ gpio.init()
 
 # read data using pin 14
 instance = dht22.DHT22(pin=PIN2)
-print("Start Boucle")
 
-fichier = open("data.txt", "a")
-fichier.write("Bonjour monde")
-fichier.close()
+print("Start program")
 
 while True:
     result = instance.read()
@@ -30,8 +27,9 @@ while True:
         print("Humidity: %.2f %%" % result.humidity)
         
         fichier = open("data.txt", "a")
-        fichier.write("Bonjour monde")
-        fichier.write("Last valid input: " + str(datetime.datetime.now()))
+        fichier.write(\n"Horodatage: " + str(datetime.datetime.now())\n)
+        fichier.write(\n"Temperature: %.2f C" % result.temperature\n)
+        fichier.write(\n"Humidite: %.2f %%" % result.humidity\n)
         fichier.close()
 
-    time.sleep(10)
+    time.sleep(5)
