@@ -19,6 +19,17 @@ instance = dht22.DHT22(pin=PIN2)
 
 print("Start program")
 
+i = 0
+while i < 10 :
+    list_temp = []
+    list_temp = [%.2f]
+    list_hum = []
+    list_hum = [%.2f %]
+    list_temp
+    list_hum
+    i = i +1
+    
+
 while True:
     result = instance.read()
     if result.is_valid():
