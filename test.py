@@ -22,14 +22,15 @@ print("Start program")
 while True:
     result = instance.read()
     if result.is_valid():
-        print("Last valid input: " + str(datetime.datetime.now()))
-        print("Temperature: %.2f C" % result.temperature)
+        print("Horodatage: " + str(datetime.datetime.now()))
+        print(time.strftime("%A %d %B %Y %H:%M:%S")
+        print("Temperature: %.2f °C" % result.temperature)
         print("Humidity: %.2f %%" % result.humidity)
         
         fichier = open("data.txt", "w")
         fichier.write("Horodatage: " + str(datetime.datetime.now()))
-        fichier.write("Temperature: %.2f C" % result.temperature)
+        fichier.write("Temperature: %.2f °C" % result.temperature)
         fichier.write("Humidite: %.2f %%" % result.humidity)
         fichier.close()
 
-    time.sleep(5)
+    time.sleep(30)
