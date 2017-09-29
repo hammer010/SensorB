@@ -27,9 +27,9 @@ while True:
         print("Humidity: %.2f %%" % result.humidity)
         
         fichier = open("data.txt", "a")
-        fichier.write(\n"Horodatage: " + str(datetime.datetime.now())\n)
-        fichier.write(\n"Temperature: %.2f C" % result.temperature\n)
-        fichier.write(\n"Humidite: %.2f %%" % result.humidity\n)
+        fichier.write(\n"Horodatage: " + str(datetime.datetime.now()))
+        fichier.write(\n"Temperature: %.2f C" % result.temperature)
+        fichier.write(\n"Humidite: %.2f %%" % result.humidity)
         fichier.close()
 
     time.sleep(5)
