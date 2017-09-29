@@ -23,7 +23,7 @@ while True:
     result = instance.read()
     if result.is_valid():
         print("Horodatage: " + str(datetime.datetime.now()))
-        print(time.strftime("%A %d %B %Y %H:%M:%S")
+        #print(time.strftime("%A %d %B %Y %H:%M:%S")
         print("Temperature: %.2f C" % result.temperature)
         print("Humidity: %.2f %%" % result.humidity)
         
