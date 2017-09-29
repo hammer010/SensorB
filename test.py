@@ -28,5 +28,10 @@ while True:
         print("Last valid input: " + str(datetime.datetime.now()))
         print("Temperature: %.2f C" % result.temperature)
         print("Humidity: %.2f %%" % result.humidity)
+        
+        fichier = open("data.txt", "a")
+        fichier.write("Bonjour monde"
+        fichier.write("Last valid input: " + str(datetime.datetime.now()))
+        fichier.close()
 
-    time.sleep(1)
+    time.sleep(10)
