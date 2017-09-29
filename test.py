@@ -30,7 +30,7 @@ while True:
         print("Humidity: %.2f %%" % result.humidity)
         
         fichier = open("data.txt", "a")
-        fichier.write("Bonjour monde"
+        fichier.write("Bonjour monde")
         fichier.write("Last valid input: " + str(datetime.datetime.now()))
         fichier.close()
 
