@@ -24,7 +24,7 @@ while True:
     if result.is_valid():
         print("Horodatage: " + str(datetime.datetime.now()))
         print(time.strftime("%A %d %B %Y %H:%M:%S")
-        print("Temperature: %.2f unichr(176)C" % result.temperature)
+        print("Temperature: %.2f C" % result.temperature)
         print("Humidity: %.2f %%" % result.humidity)
         
         fichier = open("data.txt", "w")
