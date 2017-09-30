@@ -1,3 +1,4 @@
+from statistics import mean
 from pyA20.gpio import gpio
 from pyA20.gpio import port
 
@@ -5,6 +6,7 @@ from pyA20.gpio import port
 import dht22
 import time
 import datetime
+import statistics
 
 # initialize GPIO
 #gpio.setwarnings(False)
@@ -16,7 +18,7 @@ gpio.init()
 # read data using pin 14
 instance = dht22.DHT22(pin=PIN2)
 
-print("Start program")
+print("Program is running")
 i = 0
 list_temp = []
 list_hum = []
@@ -28,10 +30,13 @@ while True :
         list_temp.append(result.temperature)
         list_hum.append(result.humidity)
         i = i + 1
+        print(i)
         time.sleep(1)
     if i == 10 : 
         break
-    
-print("etat des listes")
-print list_temp
-print list_hum
+
+average_temp = mean(list_temp)
+average_hum = mean(list_hum)
+print("Temperature :" average_temp "C")
+print("Humidite :" average_hum "%")
+
