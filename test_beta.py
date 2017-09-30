@@ -1,8 +1,3 @@
-import stats
-# Use: statistics.mean(liste)
- 
-from stats import mean
-# Use: mean(liste)
 from pyA20.gpio import gpio
 from pyA20.gpio import port
 
@@ -37,9 +32,12 @@ while True :
         time.sleep(1)
     if i == 10 : 
         break
-
-average_temp = mean(list_temp)
-average_hum = mean(list_hum)
+      
+def moyenne(liste): 
+    if (liste!= []): return float(sum(liste)) / len(liste)
+  
+moyenne(list_temp)
+moyenne(list_him)
 print(average_temp)
 print(average_hum)
 
