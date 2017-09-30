@@ -37,6 +37,6 @@ while True :
 
 average_temp = mean(list_temp)
 average_hum = mean(list_hum)
-print("Temperature :" average_temp "C")
-print("Humidite :" average_hum "%")
+print("Temperature :" average_temp)
+print("Humidite :" average_hum)
 
