@@ -12,19 +12,16 @@ import datetime
 PIN2 = port.PA6
 gpio.init()
 #gpio.cleanup()
- 
- 
- # read data using pin 14
- instance = dht22.DHT22(pin=PIN2)
- 
- print("Start program")
- i = 0
- 
- while True:
-     result = instance.read()
-     if result.is_valid():
- 
-         
+
+# read data using pin 14
+instance = dht22.DHT22(pin=PIN2)
+
+print("Start program")
+i = 0
+
+while True:
+    result = instance.read()
+    if result.is_valid():
          while i < 10 :
              list_temp = []
              list_temp.append(result.temperature)
