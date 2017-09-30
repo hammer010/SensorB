@@ -1,5 +1,5 @@
 from pyA20.gpio import gpio
- from pyA20.gpio import port
+from pyA20.gpio import port
  
  #import RPi.GPIO as GPIO
  import dht22
