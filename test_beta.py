@@ -32,3 +32,6 @@ while i < 10 :
             i = i + 1
             print i
             time.sleep(5)
+print("etat des listes")
+print list_temp
+print list_hum
