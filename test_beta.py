@@ -1,17 +1,17 @@
 from pyA20.gpio import gpio
 from pyA20.gpio import port
- 
- #import RPi.GPIO as GPIO
- import dht22
- import time
- import datetime
- 
- # initialize GPIO
- #gpio.setwarnings(False)
- #gpio.setmode(GPIO.BCM)
- PIN2 = port.PA6
- gpio.init()
- #gpio.cleanup()
+
+#import RPi.GPIO as GPIO
+import dht22
+import time
+import datetime
+
+# initialize GPIO
+#gpio.setwarnings(False)
+#gpio.setmode(GPIO.BCM)
+PIN2 = port.PA6
+gpio.init()
+#gpio.cleanup()
  
  
  # read data using pin 14
