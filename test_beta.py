@@ -19,7 +19,7 @@ instance = dht22.DHT22(pin=PIN2)
 print("Start program")
 i = 0
 
-while 1 and True :
+while True :
     result = instance.read()
     if result.is_valid():
         list_temp = []
