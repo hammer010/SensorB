@@ -1,3 +1,4 @@
+print("Démarrage programme")
 from pyA20.gpio import gpio
 from pyA20.gpio import port
 
@@ -13,10 +14,12 @@ PIN2 = port.PA6
 gpio.init()
 #gpio.cleanup()
 
+def average(list): 
+    if (list!= []): return float(sum(list)) / len(list)
+
 # read data using pin 14
 instance = dht22.DHT22(pin=PIN2)
 
-print("Program is running")
 i = 0
 list_temp = []
 list_hum = []
@@ -28,14 +31,12 @@ while True :
         list_temp.append(result.temperature)
         list_hum.append(result.humidity)
         i = i + 1
-        print("Mesure N" + str(i) + "OK")
+        print("Mesure N°" + str(i) + " effectuée")
         time.sleep(1)
     if i == 10 : 
         break
-      
-def average(list): 
-    if (list!= []): return float(sum(list)) / len(list)
-  
+
+print("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")) 
 print("Temperature: " + str(average(list_temp)) + " C")
 print("Humidite: " + str(average(list_hum)) + " %")
 
