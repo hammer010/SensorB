@@ -32,7 +32,8 @@ while True:
             list_hum.append(result.humidity)
             print list_temp
             print list_hum
-            i = i +1
+            i = i + 1
+            print i
             time.sleep(5)
 
 
