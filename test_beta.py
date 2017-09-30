@@ -24,16 +24,16 @@ while True:
     result = instance.read()
     if result.is_valid():
 
-
-        while i < 10 :
-            list_temp = []
-            list_temp = [%.2f]
-            list_hum = []
-            list_hum.append(%.2f %)
-            print list_temp
-            print list_hum
-            i = i +1
-            time.sleep(15)
+        print(result.temperature)
+        #while i < 10 :
+            #list_temp = []
+            #list_temp = [%.2f]
+            #list_hum = []
+            #list_hum.append(%.2f %)
+            #print list_temp
+            #print list_hum
+            #i = i +1
+            #time.sleep(15)
 
 
        #print("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
