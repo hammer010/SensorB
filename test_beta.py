@@ -1,4 +1,8 @@
+import statistics
+# Use: statistics.mean(liste)
+ 
 from statistics import mean
+# Use: mean(liste)
 from pyA20.gpio import gpio
 from pyA20.gpio import port
 
@@ -6,7 +10,6 @@ from pyA20.gpio import port
 import dht22
 import time
 import datetime
-import statistics
 
 # initialize GPIO
 #gpio.setwarnings(False)
