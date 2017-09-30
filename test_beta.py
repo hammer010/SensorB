@@ -28,7 +28,7 @@ while True :
         list_temp.append(result.temperature)
         list_hum.append(result.humidity)
         i = i + 1
-        print(i)
+        print("Mesure N" + str(i) + "OK")
         time.sleep(1)
     if i == 10 : 
         break
