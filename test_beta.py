@@ -1,7 +1,7 @@
-import statistics
+import stats
 # Use: statistics.mean(liste)
  
-from statistics import mean
+from stats import mean
 # Use: mean(liste)
 from pyA20.gpio import gpio
 from pyA20.gpio import port
