@@ -36,6 +36,6 @@ while True :
 def average(list): 
     if (list!= []): return float(sum(list)) / len(list)
   
-print(average(list_temp) + "C")
-print(average(list_hum) + "%")
+print("Temperature: " + str(average(list_temp)) + " C")
+print("Humidite: " + str(average(list_hum)) + " %")
 
