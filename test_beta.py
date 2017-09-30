@@ -18,13 +18,14 @@ instance = dht22.DHT22(pin=PIN2)
 
 print("Start program")
 i = 0
+list_temp = []
+list_hum = []
 
 while True :
     result = instance.read()
     if result.is_valid():
-        list_temp = []
+        
         list_temp.append(result.temperature)
-        list_hum = []
         list_hum.append(result.humidity)
         print list_temp
         print list_hum
