@@ -27,7 +27,7 @@ while True:
 
         while i < 10 :
             list_temp = []
-            list_temp.append(%.2f)
+            list_temp = [%.2f]
             list_hum = []
             list_hum.append(%.2f %)
             print list_temp
