@@ -46,4 +46,4 @@ while True:
         #fichier.write("\nHumidite: %.2f %%" % result.humidity)
         #fichier.close()
 
-    time.sleep(1)
+time.sleep(1)
