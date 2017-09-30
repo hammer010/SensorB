@@ -33,9 +33,9 @@ while True :
     if i == 10 : 
         break
       
-def moyenne(liste): 
-    if (liste!= []): return float(sum(liste)) / len(liste)
+def average(list): 
+    if (list!= []): return float(sum(list)) / len(list)
   
-print(moyenne(list_temp))
-print(moyenne(list_hum))
+print(average(list_temp) + "C")
+print(average(list_hum) + "%")
 
