@@ -36,8 +36,6 @@ while True :
 def moyenne(liste): 
     if (liste!= []): return float(sum(liste)) / len(liste)
   
-moyenne(list_temp)
-moyenne(list_him)
-print(average_temp)
-print(average_hum)
+print(moyenne(list_temp))
+print(moyenne(list_hum))
 
