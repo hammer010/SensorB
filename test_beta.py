@@ -33,8 +33,9 @@ while 1 :
             print i
             time.sleep(5)
             
-            if i == 10 : 
-                break
+if i == 10 : 
+    break
+    
 print("etat des listes")
 print list_temp
 print list_hum
