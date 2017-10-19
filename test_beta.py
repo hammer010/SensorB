@@ -41,7 +41,7 @@ print("Temperature: " + str(average(list_temp)) + " C")
 print("Humidite: " + str(average(list_hum)) + " %")
 
 fichier = open("sensorA.txt", "w")
-fichier.write("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+fichier.write("Horodatage: " + datetime.datetime.now().strftime("%H:%M:"))
 fichier.write("\nTemperature: " + str(average(list_temp)) + " C")
 fichier.write("\nHumidite: " + str(average(list_hum)) + " %")
 fichier.close()
