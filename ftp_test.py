@@ -1,3 +1,4 @@
+from ftplib import FTP
 host = "192.168.1.70" # adresse du serveur FTP
 user = "pi" # votre identifiant
 password = "raspberry" # votre mot de passe
