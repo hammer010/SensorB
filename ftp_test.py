@@ -1,7 +1,8 @@
 from ftplib import FTP
 ftp = FTP('192.168.1.70', 'pi', 'raspberry')
 
-ftp.getwelcome()
+etat = ftp.getwelcome()
+print "Etat : ",etat
 
 ftp.cwd("/home/pi/Bureau")
 
