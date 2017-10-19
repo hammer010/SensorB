@@ -1,4 +1,5 @@
 print("Demarrage programme")
+from ftplib import FTP
 from pyA20.gpio import gpio
 from pyA20.gpio import port
 
@@ -6,6 +7,11 @@ from pyA20.gpio import port
 import dht22
 import time
 import datetime
+
+# Connexion serveur FTP
+ftp = FTP('192.168.1.70', 'pi', 'raspberry')
+etat = ftp.getwelcome()
+print "Etat : ",etat
 
 # initialize GPIO
 #gpio.setwarnings(False)
@@ -40,10 +46,22 @@ print("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 print("Temperature: " + str(average(list_temp)) + " C")
 print("Humidite: " + str(average(list_hum)) + " %")
 
+# Creation fichier de resultats
 fichier = open("sensorA.txt", "w")
 fichier.write(datetime.datetime.now().strftime("%H:%M"))
 fichier.write("\n" + str(average(list_temp)))
 fichier.write("\n" + str(average(list_hum)))
 fichier.close()
+
+# Envoi resultats vers serveur FTP
+ftp.cwd("/home/pi/Bureau")
+fichier = "/home/orangepi/develop/DHT22-Python-library-Orange-PI/sensorA.txt
+file = open(fichier,'rb')
+ftp.storbinary('STOR '+'sensorA.txt', file)
+ftp.retrlines('LIST')
+print ftp.dir()
+ftp.close()
+
+# Fin du programme
 print("Sauvegarde des resultats effectuee")
 print("Fin programme")
