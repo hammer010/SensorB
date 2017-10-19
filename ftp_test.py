@@ -3,7 +3,7 @@ ftp = FTP('192.168.1.70', 'pi', 'raspberry')
 
 ftp.getwelcome()
 
-ftp.cwd(/home/pi/Bureau)
+ftp.cwd("/home/pi/Bureau")
 
 
 
