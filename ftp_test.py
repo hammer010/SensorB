@@ -11,7 +11,7 @@ fichier = "/home/orangepi/develop/build/test.txt"
 file = open(fichier,'rb')
 
 # Envoi Fichier
-ftp.storbinary('STOR '+'test.csv', file)
+ftp.storbinary('STOR '+'test.txt', file)
 ftp.retrlines('LIST')
 print ftp.dir()
 
