@@ -32,7 +32,7 @@ while True :
         list_hum.append(result.humidity)
         i = i + 1
         print("Mesure N*" + str(i) + " effectuee")
-        time.sleep(20)
+        time.sleep(2)
     if i == 10 : 
         break
 
