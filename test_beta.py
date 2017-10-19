@@ -55,7 +55,7 @@ fichier.close()
 
 # Envoi resultats vers serveur FTP
 ftp.cwd("/home/pi/Bureau")
-fichier = "/home/orangepi/develop/DHT22-Python-library-Orange-PI/sensorA.txt
+fichier = "/home/orangepi/develop/DHT22-Python-library-Orange-PI/sensorA.txt"
 file = open(fichier,'rb')
 ftp.storbinary('STOR '+'sensorA.txt', file)
 ftp.retrlines('LIST')
