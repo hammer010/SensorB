@@ -54,7 +54,7 @@ fichier.write("\n" + str(average(list_hum)))
 fichier.close()
 
 # Envoi resultats vers serveur FTP
-ftp.cwd("/home/pi/Bureau")
+ftp.cwd("/var/www/html")
 fichier = "/home/orangepi/develop/DHT22-Python-library-Orange-PI/sensorA.txt"
 file = open(fichier,'rb')
 ftp.storbinary('STOR '+'sensorA.txt', file)
