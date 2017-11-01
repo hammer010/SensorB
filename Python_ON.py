@@ -47,7 +47,7 @@ while true
     print("Humidite: " + str(average(list_hum)) + " %")
 
 # Creation fichier de resultats
-    fichier = open("sensorA.txt", "w")
+    fichier = open("sensorB.txt", "w")
     fichier.write(datetime.datetime.now().strftime("%H:%M"))
     fichier.write("\n" + str(average(list_temp)))
     fichier.write("\n" + str(average(list_hum)))
@@ -55,7 +55,7 @@ while true
 
 # Envoi resultats vers serveur FTP
     ftp.cwd("/var/www/html")
-    fichier = "/home/orangepi/develop/DHT22-Python-library-Orange-PI/sensorA.txt"
+    fichier = "/home/orangepi/develop/DHT22-Python-library-Orange-PI/sensorB.txt"
     file = open(fichier,'rb')
     ftp.storbinary('STOR '+'sensorA.txt', file)
     ftp.retrlines('LIST')
